@@ -1,0 +1,71 @@
+body {
+    color: #000;
+    background-color: #d4d4d4;
+}
+header, main {
+    background: #ececec;
+}
+header {
+    border-bottom: solid 3px #ccc;
+    border-left: solid 3px #ccc;
+    border-right: solid 3px #ccc;
+}
+nav ul li .button {
+    background-color: #fff;
+    color: #000;
+    border: solid #444 2px;
+    transition: background-color 0.3s, color 0.3s;
+}
+nav ul li .button:hover {
+        animation: colorSwap 0.5s forwards;
+    }
+nav ul li .button:not(:hover) {
+    animation: colorRestore 0.5s forwards;
+}
+@keyframes colorSwap {
+    0% {
+        background-color: #fff;
+        color: #000;
+    }
+
+    100% {
+        background-color: #111111;
+        color: #fff;
+    }
+}
+@keyframes colorRestore {
+    0% {
+        background-color: #111111;
+        color: #fff;
+    }
+
+    100% {
+        background-color: #fff;
+        color: #000;
+    }
+}
+[istitle="true"]::selection {
+    background: #111;
+    color: #fff;
+}
+[istitle="true"] {
+    border-bottom: #ccc 1px solid;
+}
+#anj247, #ERROR {
+    background: #fff;
+    border: solid 2.5px #000;
+    user-select: none;
+}
+#goButton, .uploadButton {
+    background: #fff;
+    border: solid 2.5px #000;
+}
+    #goButton:hover, .uploadButton:hover {
+        animation: colorSwap 0.5s forwards;
+    }
+
+    #goButton:not(:hover), .uploadButton:not(:hover) {
+        animation: colorRestore 0.5s forwards;
+    }
+.uploadDate {
+  color: #ccc;
