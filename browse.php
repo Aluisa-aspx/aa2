@@ -3,14 +3,14 @@ session_start();
 
 $passkey = "4881AA2";
 
-// Function to sanitize input
+// sanitize input
 function sanitizeInput($input) {
     $input = trim($input);
     $input = htmlspecialchars($input);
     return $input;
 }
 
-// Function to handle form submission
+// handle form submission
 function handleFormSubmission() {
     global $passkey;
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
